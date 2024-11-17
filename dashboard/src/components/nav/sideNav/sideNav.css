@@ -1,0 +1,90 @@
+.side-nav{
+    margin: 0;
+    width:17%;
+    height: 100%;
+
+    background: blueviolet;
+    border: 1px solid white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    z-index: 1000 !important;
+}
+
+.side-nav-links{
+    cursor:pointer;
+    padding:60px 0 20px 0;
+
+  }
+.side-nav-links .link{
+    color: white;
+    text-decoration: none;
+}
+.group-info{
+    height:70px;
+    display: flex;
+    color: aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    
+}
+
+.group-img{
+    width: 37px;
+    height:37px;
+}
+.group-name{
+   margin-left: 15px;
+}
+
+
+.group-name.hidden{
+    display: none;
+}
+
+.side-nav nav{    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.side-nav-inner.hidden-nav-text p .link span{
+    display: none;
+}
+
+nav ul li link{
+ display: flex;
+ align-items: center;
+}
+
+.side-nav-links{
+       
+       color: white;
+        list-style-type: none;
+        margin-bottom:1rem;
+       
+}
+
+.side-nav-links .link{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+
+}
+
+.side-nav-links i{
+    padding:0px 0.5rem 0px 0.5rem;
+
+}
+
+.side-nav.collapsed{
+   width: 7%;
+}
+.side-nav.expanded{
+width:17%;
+}

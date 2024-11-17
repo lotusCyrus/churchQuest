@@ -1,0 +1,70 @@
+
+    
+.dashboard-box, .members-box{
+    position: relative;
+    padding-top:100px;
+    justify-content: center;
+ 
+}
+
+
+
+.data-cards, .member-cards{
+    display: flex;
+    padding: 2rem 0rem 0 0;
+    flex-wrap: wrap;
+    
+} 
+
+.card, .member-card{
+    padding: 15px;
+    margin:1rem 1rem 0 1rem;
+    height: 190px;
+    border:2px solid whitesmoke;
+    transition: transform 0.5s;
+    flex-basis: 250px;
+}
+.card{
+    display: flex;
+
+}
+.card-details{
+    display: flex;
+    width: 75px;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+
+
+}
+.card-icon{
+    padding:1.5rem;   
+    cursor: pointer;
+}
+.card-icon i{
+   font-size: 2rem;
+}
+
+.card-details span{
+
+}
+.card-button , .profile-button {
+  width: 80px;
+  height:40px ;  
+  text-align: left;
+  border-radius:4px;
+  padding: 8px;
+  cursor: pointer;
+}
+.card-button i{
+    padding:0 8px 0 ;
+}
+.card:hover{
+    box-shadow: 6px 6px 6px 6px rgba(138, 43, 226, 0.3);
+   
+}
+
+.dashboard-icon {
+    font-size: 2rem;
+    color: white; /* Blue color */
+}

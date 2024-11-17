@@ -1,0 +1,360 @@
+@media (min-width: 1301px) {
+   
+  .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;}
+
+  .data-cards, .member-cards{
+   justify-content: center;
+  }
+  
+
+}
+
+
+@media (min-width: 1101px) and (max-width: 1300px) 
+{  
+  .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;
+   }
+  .data-cards, .member-cards{
+    margin-left:18%;
+    justify-content: flex-start;
+
+  }
+}
+@media (min-width: 900px) and (max-width: 1100px) 
+{
+   .data-cards,.member-cards{
+    justify-content: center;
+    
+   }
+}
+@media (min-width: 768px) and (max-width: 1250px) 
+{
+   .modal-content{
+    margin-left: 25%;
+    margin-right: 15%;
+   }
+
+  .profile-input-container {
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+   }
+   .delete-account{
+   flex-direction: column;
+   gap: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1079px) {
+  /* Styles for medium devices */
+  .side-nav-links .link {
+    font-size: 18px;
+  }
+.data-cards, .member-cards{
+  margin-right: 3%;
+}
+  .updates{
+    flex-direction: column;
+  }
+  .notifications{
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium devices */
+  .side-nav ul{    
+    padding:10px ;
+}
+.link .nav-link{
+  font-size: 16px;
+ }
+  .updates{
+    margin: auto;
+    justify-content: center;
+  }  
+  .notifications{
+    width: 100%;
+  }
+       /*Settings page*/ 
+.settings-nav-text{
+  display: none
+}
+
+.settings-nav ul li{
+  justify-content: center !important;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 902px) {
+  /* Styles for medium devices */
+
+
+  .data-cards, .member-cards{  
+    margin: auto;
+    justify-content: center; 
+  }
+.card, .member-card{
+  width: 400px;
+  height: 200px;
+  justify-content: space-between;
+}
+
+.user-info{
+  margin:7px;
+  font-size: 14px;
+  color: gray;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.updates{
+  flex-direction: column;
+}
+.notifications{
+  width: 100%;
+}
+
+
+
+}
+@media (min-width:230px) and (max-width:768px)
+{
+  .modal{
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .modal-content{
+    margin-left: 18%;
+    min-width: 233px
+  }
+
+  .modal-content .modal-content-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+  }
+  .group-info{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  } 
+
+   .side-nav nav{
+    margin-top: 90px;  
+   }
+
+.side-nav-links .link{
+  flex-direction: column;
+
+} 
+.side-nav-links .link i {
+  overflow: visible;
+}
+
+.side-nav-links .link i::after{
+  z-index: 2000 !important;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: white;
+  color:blueviolet;
+  font-size: 12px;
+  margin-top: -70px;
+  margin-left: -25%;
+  padding: 12px;
+  width:70px;
+  border-radius: 10px;
+  display: none;
+  position:absolute;
+} 
+.side-nav-links .link i:hover::after{
+   display: block;
+   cursor:grab
+}
+.side-nav-links .link .fa-table-columns::after{
+  content:'Dashboard'
+}
+
+.side-nav-links .link .fa-user-plus::after{
+  content:'Collect'
+}
+
+.side-nav-links .link .fa-people-group::after{
+  content:'Members'
+}
+.side-nav-links .link .fa-gears::after{
+  content:'Settings'
+}
+
+  .side-nav-links .link .fa-door-open::after{
+
+  content: 'Log out';
+}
+  .top-bar{
+    justify-content: space-around;
+  }
+
+  
+  .hamburger, .bar{
+    display: none;
+  }
+
+  .user-info, .group-name, .nav-link{
+  display: none;
+   }
+       
+   .right-section.close{
+    left:22% !important
+  }
+  .top-bar.close{
+    left:22% !important
+  }
+  
+  .top-bar.close{
+   width:70% !important
+  }
+  
+  
+.side-nav.collapsed{
+ width: 22% !important;
+}
+
+
+  .search-box{
+    min-width: 100px;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-search{
+    width: 20%;
+  }
+  .search-input{
+    width: 50px
+  }
+   .user{
+    padding-right: 30px;
+  }
+  .dashboard-box, .members-box{
+      padding:100px 0px 0px 0px;
+}
+
+
+  .data-cards, .member-cards { 
+    justify-content: center;
+    
+      }
+ 
+      .card, .member-card{
+            justify-content: space-between;
+      }
+.updates{
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+.notifications{
+  width: 100%;
+  }
+
+  /*settings page*/
+  .profile-input-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+ }
+ .delete-account{
+ flex-direction: column;
+ gap: 15px;
+}
+.settings-nav{
+  width:10%; 
+}
+.settings-board{
+left:10%;
+width: 90%;
+
+}
+
+.settings-nav ul{
+  justify-content: center;
+}
+.settings-nav ul i{
+  justify-content: center;
+}
+.settings-nav-text, .profile-upload-text{
+  display: none;
+}
+}
+@media (min-width:0px) and (max-width:300px)
+  {
+    
+    .hamburger, .bar{
+      display: none;
+      visibility: none;
+    }
+   
+    .search-box{
+  
+      margin: 0 20px 0 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .search-input{
+      font-size: 10px;
+    }  
+    .search-input{
+      width: 50px !important
+    }
+    .user{
+      padding-right: 25px;
+    }
+    .user-info, .group-name, .nav-link , .settings-nav-text, .profile-upload-text{
+      display: none;
+       }
+   
+      .updates .card, .member-card, .activities, .notifications{
+        z-index: -1000   ;        
+      }
+
+      /*settings*/
+      .settings-nav ul li{
+        justify-content: center !important;
+      
+      }
+     
+          
+ .delete-account{
+  flex-direction: column;
+  gap: 15px;
+ }
+      
+ 
+      .right-section.close{
+        left:22% !important
+      }
+      .top-bar.open{
+        left:18% !important
+      }
+      .top-bar.close{
+        left:22% !important
+      }
+      
+      .top-bar.close{
+       width:70% !important;
+      }
+      
+      
+    .side-nav.collapsed{
+     width: 22% !important;
+    }
+ 
+    
+  }

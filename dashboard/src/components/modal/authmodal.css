@@ -1,0 +1,51 @@
+.auth-modal{
+    background-color: #F7F7F7;
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.auth-modal .logo-container{
+    text-decoration: none;
+}
+.auth-modal-content{
+    width: 30%;
+    height:72%;
+    color:rgb(53, 49, 49);
+    overflow-y: auto;
+    font-size: 0.8rem;
+}
+
+.user-field{
+    width:max-content;
+    border:0.05px solid gainsboro;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 0 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width:95% ;
+    margin:15px 25px 15px 10px
+}
+.user-field:hover{
+    border:2px solid rgba(138, 43, 226,0.2);  
+
+}
+.user-input {
+    height: 25px;
+    width: 100%;
+    min-width: 28px;
+    margin: 0 5px 0 5px;
+    border:none;
+    text-align: center;
+    position: relative;
+}
+
+.search-input:focus{
+    outline: none;
+}
+
+.auth-btn{
+    margin: 5px;
+}
