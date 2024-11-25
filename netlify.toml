@@ -1,0 +1,9 @@
+[build]
+  # Specify the root directory for deployment
+  publish = "./"
+
+[[redirects]]
+  # Route requests to /dashboard to the React app
+  from = "/dashboard/*"
+  to = "/dashboard/index.html"
+  status = 200
