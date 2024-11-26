@@ -20,7 +20,7 @@ const handleLogout=() => {
                  <div className={`side-nav-inner ${isOpen?'shown-nav-text':'hidden-nav-text'}`}>
             
             <p  className="side-nav-links">
-              <Link className='link' to="/" >
+              <Link className='link' to="/dashboard" >
               <i className="fa-solid fa-table-columns"></i><span className="nav-link">Dashboard</span></Link>
               </p>
             <p  className="side-nav-links"  onClick={()=>modalToggle("Convert")}><Link className='link'  ><i className="fa-solid fa-user-plus"></i><span className="nav-link"  >Collect</span></Link></p>
