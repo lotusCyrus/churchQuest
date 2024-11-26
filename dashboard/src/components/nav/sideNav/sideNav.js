@@ -24,8 +24,8 @@ const handleLogout=() => {
               <i className="fa-solid fa-table-columns"></i><span className="nav-link">Dashboard</span></Link>
               </p>
             <p  className="side-nav-links"  onClick={()=>modalToggle("Convert")}><Link className='link'  ><i className="fa-solid fa-user-plus"></i><span className="nav-link"  >Collect</span></Link></p>
-            <p  className="side-nav-links"><Link className='link' to="/members" ><i className="fa-solid fa-people-group"></i><span className="nav-link">Members</span></Link></p>
-            <p  className="side-nav-links"><Link className='link' to="/settings" ><i className="fa-solid fa-gears"></i><span className="nav-link">Settings</span></Link></p>
+            <p  className="side-nav-links"><Link className='link' to="/dashboard/members" ><i className="fa-solid fa-people-group"></i><span className="nav-link">Members</span></Link></p>
+            <p  className="side-nav-links"><Link className='link' to="/dashboard/settings" ><i className="fa-solid fa-gears"></i><span className="nav-link">Settings</span></Link></p>
             <p  className="side-nav-links" onClick={handleLogout} ><Link className='link'><i className="fa-solid fa-door-open"></i><span  className="nav-link">Log Out</span></Link></p>
 
             </div>

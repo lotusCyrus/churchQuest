@@ -21,7 +21,7 @@ export default function TopBar({toggleSideNav, isOpen}) {
 
           </div>
           
-          <Link to='/Settings' className='top-bar-link'>
+          <Link to='/dashboard/Settings' className='top-bar-link'>
           <div className="user">
              <img src={profileImage} className="user-img" alt="" />
              <div className="user-info">

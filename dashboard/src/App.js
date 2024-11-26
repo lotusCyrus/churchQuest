@@ -67,9 +67,9 @@ const modalToggle=(value)=>{
            <div className={`right-section ${isOpen ? 'open' : 'close'}`}>
            <TopBar isOpen={isOpen} toggleSideNav={toggleSideNav}/>
         <Routes>
-            <Route path="/"  element={<Home isOpen={isOpen} modalToggle={modalToggle} />} />
-            <Route path="/Members" isOpen={isOpen} element={<Members setMemberList={setMemberList} memberList={memberList} addMember={addMember}  />} />
-            <Route path="/Settings"  element={<Settings />} />
+            <Route path="/dashboard"  element={<Home isOpen={isOpen} modalToggle={modalToggle} />} />
+            <Route path="/dashboard/Members" isOpen={isOpen} element={<Members setMemberList={setMemberList} memberList={memberList} addMember={addMember}  />} />
+            <Route path="/dashboard/Settings"  element={<Settings />} />
          </Routes>
        </div>
       </div>
