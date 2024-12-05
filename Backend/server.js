@@ -7,10 +7,10 @@ app.use(cors())
 app.use(express.json())
 
 const db = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password: "",
-    database: "churchquest"
+    host:"208.91.198.106",
+    user:"lotusbat_user-churchquest-db",
+    password: "drw)$},VtTD-",
+    database: "lotusbat_churchquest"
 })
 
 db.connect((err)=>{
@@ -64,10 +64,23 @@ app.post('/login',  (req, res) =>{
 
     db.query(sql, [req.body.email, req.body.password] , (err, data) => {
          if(err){
-            return res.json("Error")
+            return res.json("Database Error")
          }
          if(data.length > 0) {
-            return res.json('success')
+             
+            const user=data[0];
+
+            return res.json({
+                message: "Login successful",
+                user:{
+                    id:user.index,
+                    churchName:user.churchName,
+                    email:user.email,
+                    address: user.address
+                }
+            })
+            
+
          } else{
              return res.json('Invalid Credentials')
          }

@@ -10,7 +10,7 @@ export default function Authmodal({loginSuccess}) {
   return (
     <div className='auth-modal'>
               
-            <div className='logo-container'> <img className='logo' src={churchLogo}/> <h4> <a href='#' target="_blank" rel="noopener noreferrer">Church Quest</a> </h4>  </div> 
+            <div className='logo-container'> <img className='logo' src={churchLogo}/> <h4> <a href='churchquest.netlify.app' target="_blank" rel="noopener noreferrer">Church Quest</a> </h4>  </div> 
        
                     
                     <Authform loginSuccess={loginSuccess} />

@@ -2,9 +2,12 @@ import React from 'react'
 import './Settings.css'
 import profileImage from '../../components/nav/topBar/profileImage.png'
 import modeIcon from '../../../src/assets/lightDarkMode.svg'
+import { useUser } from '../../context/UserContext'
 import { useTheme } from '../../hooks/useTheme'
 export default function Settings() {
    
+   const {user}=useUser()
+
    const {mode, changeMode, changeBackgroundColor}=useTheme()
    
    const toggleMode = () => {
@@ -31,7 +34,7 @@ export default function Settings() {
        
        
        <div className="settings-board">
-          <div className="profile-name"> <span><b>Johnson</b> </span>  <span className="profile-change delete">(Change)</span></div>  
+          <div className="profile-name"> <span><b>{user.churchName}</b> </span>  <span className="profile-change delete">(Change)</span></div>  
           <div className="profile-pic">    <img src={profileImage} className="user-img" alt="" />  <span className="profile-upload-text"> Upload New Picture</span> <span className="delete">Remove</span></div>
       
             

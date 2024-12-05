@@ -2,9 +2,13 @@ import React from 'react';
 import './sideNav.css';
 import churchLogo from './churchLogo.png';
 import { Link } from 'react-router-dom';
+import { useUser } from '../../../context/UserContext';
 export default function SideNav({setIsAuthModalOpen, modalToggle,isOpen}) { 
-   
+
+  const {user,logout} =useUser()
+  
 const handleLogout=() => {
+  logout()
   setIsAuthModalOpen(true)
 }
 

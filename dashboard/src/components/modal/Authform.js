@@ -1,17 +1,18 @@
 import React from 'react'
-import { useState } from 'react'
-import { Form } from 'react-router-dom'
-import './modal.css'
+import { useState } from 'react';
+import { Form } from 'react-router-dom';
+import { useUser } from '../../context/UserContext';
+import './modal.css';
 import './authmodal.css'
-import { useTheme } from '../../hooks/useTheme'
+import { useTheme } from '../../hooks/useTheme';
 import validation from './LoginValidation';
 import signupValidation from './SignupValidation'
 import LoginValidation from './LoginValidation'
 import axios from 'axios'
 
-
 export default function Authform({loginSuccess}) {
 
+const {user, login, logout}=useUser()
 const [isLogin, setIsLogin]=useState(true)
 const [isSignup, setIsSignup]=useState(null)
 
@@ -22,37 +23,41 @@ const [userData, setUserData]=useState({
         address:'',
         email: '',
         password: '',
-        confirmPassword:''        
+        confirmPassword:'' 
        })
 
   const [errors, setErrors]=useState({
     login:{},
-    signup:{}
-  })
-
-   const handleInput =(event)=>{
+    signup:{} 
+  }) 
+  
+   const handleInput =(event)=>{ 
     setUserData(prev => ({...prev, [event.target.name]: event.target.value }))
-    }
+    } 
         
    const handleLogin=(event)=>{
-   event.preventDefault();
+   event.preventDefault(); 
    const loginErrors=LoginValidation(userData)
    setErrors(prevErrors=>({...prevErrors, login:loginErrors}));
+   
+   if(errors.login.email === "" && errors.login.password === "") {
+  
 
-   if(errors.login.email === "" && errors.login.email === "") {
         axios.post('http://localhost:8081/login', userData)
         .then(res => {
-           
-            if(res.data === "success")
+          
+            if(res.data.message === "Login successful")
             {
+              login(res.data.user)
               loginSuccess()
               console.log(res)
             }
              else{
-              alert("Invalid Credentialsy")
+              alert("Invalid Credentials")
              }
              })
              .catch(err => console.log(err))
+
         }    
       }
 
@@ -107,22 +112,23 @@ const [userData, setUserData]=useState({
 
           
           <div className="user-field">
-              <i className="fa fa-lock"></i>
+              <i className="fa fa-lock/"></i>
               <input type="password" name='password' value={userData.password} placeholder="Create a password" className="user-input" onChange={handleInput} />
           </div>
           
           {errors.signup.password && <span>{errors.signup.password}</span>}
 
-
           <div className='user-field'  > 
                 <i className='fa fa-lock'></i>
                 <input type='password' name='confirmPassword' value={userData.confirmPassword}  className='user-input' placeholder='Confirm Password' onChange={handleInput} />  
           </div>
+
           {errors.signup.confirmPassword && <span>{errors.signup.confirmPassword}</span>}
 
           <div>
              <input type='submit' className='auth-btn submit-btn' value='submit'/>
           </div>
+          
             <br/><br/>
 
           <span>Already have an account ?</span> <span  onClick={()=>setIsLogin(true)}> <b>Log in </b> </span>
