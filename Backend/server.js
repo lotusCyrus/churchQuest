@@ -20,7 +20,7 @@ db.connect((err)=>{
     }
     console.log('connected to the database')
 })
-
+ 
 app.post('/register', (req, res)=>{
    
     const checkEmailQuery="SELECT * FROM users WHERE churchName = ? OR email= ?  "
