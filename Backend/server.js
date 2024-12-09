@@ -43,7 +43,7 @@ app.post('/register', (req, res)=>{
             req.body.email,
             req.body.password
         ]
-    db.query(registerQuery, [userData], (err , data) =>
+        db.query(registerQuery, [userData], (err , data) =>
            {
              if (err){
                    return res.json("Error in registration")       
@@ -57,11 +57,9 @@ app.post('/register', (req, res)=>{
  })
 
 app.post('/login',  (req, res) =>{
-   
-    
+       
     const sql="SELECT * FROM users WHERE email = ? AND password = ?";
     
-
     db.query(sql, [req.body.email, req.body.password] , (err, data) => {
          if(err){
             return res.json("Database Error")
@@ -89,7 +87,6 @@ app.post('/login',  (req, res) =>{
 })
 
 
-
-app.listen(8081, ()=>{
+app.listen('https://churchquest.netlify.app', ()=>{
     console.log('listening')
 })
