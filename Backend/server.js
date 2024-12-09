@@ -92,6 +92,7 @@ app.post('/login',  (req, res) =>{
 })
 
 
-app.listen('https://churchquest.netlify.app', ()=>{
-    console.log('listening')
-})
+
+app.listen(8081, () => {
+    console.log('Server is running on port 8081');
+  });
