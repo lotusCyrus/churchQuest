@@ -1,8 +1,6 @@
 import { createContext, useReducer } from "react";
 
 export const ThemeContext =createContext() //the function we just imported
-
-
 export function ThemeProvider({ children }){
 
      //custom logic
@@ -17,7 +15,6 @@ export function ThemeProvider({ children }){
                     return state
          }
      } 
-
      const [state, dispatch]=useReducer(themeReducer,  {
         color: 'whtie',
         mode:'white'

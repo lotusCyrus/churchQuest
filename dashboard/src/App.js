@@ -19,7 +19,6 @@ const [isModalOpen, setIsModalOpen]=useState(false)
 const [status,setStatus]=useState(null)
 const [isAuthModalOpen, setIsAuthModalOpen]=useState(true)
 
-
 const {mode}=useTheme()
 
 const [memberList, setMemberList ]=useState([
@@ -55,12 +54,7 @@ const modalToggle=(value)=>{
    return ( 
       <div className={`App ${mode ==='dark'?'dark':'light'}`}>
         
-        {isAuthModalOpen && <Authmodal  loginSuccess={loginSuccess}  />}
-          {isModalOpen && (
-                <Modal  onClose={onClose}>
-                           <ModalForm addMember={addMember} status={status}/>
-              </Modal>
-   )}     
+     
       
            <SideNav setIsAuthModalOpen={setIsAuthModalOpen} modalToggle={modalToggle} isOpen={isOpen}/>     
       

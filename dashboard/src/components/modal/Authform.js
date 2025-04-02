@@ -43,7 +43,7 @@ const [userData, setUserData]=useState({
    if(errors.login.email === "" && errors.login.password === "") {
   
 
-        axios.post('https://churchquest.netlify.app/login', userData)
+        axios.post('http://localhost:8081/login', userData)
         .then(res => {
           
             if(res.data.message === "Login successful")
@@ -70,7 +70,7 @@ const [userData, setUserData]=useState({
      
     if (errors.signup.churchName === "" && errors.signup.email === "")
     {
-      axios.post('https://churchquest.netlify.app/register', userData )
+      axios.post('http://localhost:8081/register', userData )
       .then(res => console.log(res))
       .catch(err => console.log(err))
   }

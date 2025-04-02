@@ -5,7 +5,6 @@
     display: flex;
     position: fixed;
     z-index: 1000;
-   
 }
 
 .modal-content, .auth-modal-content{
@@ -22,6 +21,7 @@
 .modal-content{
     margin-top:250px;
     margin-bottom:250px;
+    border: 1px solid rgb(226, 219, 219);
     width: 50%;
     height:50%;
 }

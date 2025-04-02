@@ -5,17 +5,23 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors({
-    origin: 'https://churchquest.netlify.app', // Netlify URL for  React app
+    origin: 'http://localhost:3000', // Netlify or localhost URL for  React app
     credentials: true
   }));
 
 app.use(express.json())
 
-const db = mysql.createConnection({
+/**const db = mysql.createConnection({
     host:"208.91.198.106",
     user:"lotusbat_user-churchquest-db",
     password: "drw)$},VtTD-",
     database: "lotusbat_churchquest"
+})**/
+const db = mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password: "",
+    database: "churchquest"
 })
 
 db.connect((err)=>{

@@ -36,6 +36,7 @@ function signupValidation(userData){
     } else{
         errors.email= ""
     }
+
 //checking for address field
 
     if(userData.address.trim() === "" ){
@@ -52,6 +53,7 @@ function signupValidation(userData){
     if(userData.password.trim() === "" ){
         errors.password = "Password should not be empty"
     }
+
       else if(!passwordPattern.test(userData.password)){
         errors.password="Password didn't match"
       } 
@@ -61,12 +63,9 @@ function signupValidation(userData){
     if(userData.confirmPassword.trim() === "" ){
         errors.confirmPassword = "Password should not be empty"
     }
-    
       else if(userData.password !== userData.confirmPassword ){
         errors.confirmPassword="Your passwords are different"
       } 
-      
-
         return errors;
 }
 export default signupValidation
